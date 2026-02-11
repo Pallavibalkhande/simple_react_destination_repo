@@ -1,9 +1,25 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
+package src/index.js
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import { AppInitializer } from './AppInitializer';
 
-function App() {
-  return <h1>Hello from Minimal React App!</h1>;
+AppInitializer.initializePlugins();
+
+const container = document.getElementById('root');
+if (!container) {
+  throw new Error('Root element with id "root" not found.');
 }
 
-const root = createRoot(document.getElementById("root"));
-root.render(<App />);
+const root = createRoot(container);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+package src/windowEntry.js
+import { WindowWrapper } from './window/WindowWrapper';
+import { GetWindowFromHandle } from './window/GetWindowFromHandle';
+
+export { WindowWrapper, GetWindowFromHandle };

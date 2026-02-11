@@ -1,0 +1,30 @@
+:root {
+  --primary-color: #FF9800;
+  --secondary-color: #0D47A1;
+  --app-bar-bg: var(--primary-color);
+  --bottom-nav-bg: var(--secondary-color);
+  --scaffold-bg: var(--primary-color);
+}
+
+.app-bar {
+  background-color: var(--app-bar-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-bar .title {
+  text-align: center;
+  margin: 0;
+}
+
+.bottom-nav {
+  background-color: var(--bottom-nav-bg);
+}
+
+body {
+  background-color: var(--scaffold-bg);
+  color: #000;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
